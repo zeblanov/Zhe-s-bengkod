@@ -6,17 +6,17 @@
             {{-- Logo & Title --}}
             <div class="text-center mb-7">
                 <img src="{{ asset('images/logo-bengkot.png') }}"
-                     class="w-[60px] h-[60px] rounded-[16px] object-cover mx-auto mb-[14px] block">
+                    class="w-[60px] h-[60px] rounded-[16px] object-cover mx-auto mb-[14px] block">
                 <h1 class="text-[1.5rem] font-extrabold text-[#1e2d6b] m-0 mb-[6px]">Poliklinik</h1>
                 <p class="text-[0.83rem] text-slate-400 m-0">Buat akun baru</p>
             </div>
 
             {{-- Error Alert --}}
             @if ($errors->any())
-                <div class="alert alert-error mb-4 rounded-xl text-[0.83rem]">
-                    <i class="fas fa-circle-xmark"></i>
-                    <span>{{ $errors->first() }}</span>
-                </div>
+            <div class="alert alert-error mb-4 rounded-xl text-[0.83rem]">
+                <i class="fas fa-circle-xmark"></i>
+                <span>{{ $errors->first() }}</span>
+            </div>
             @endif
 
             <form action="{{ route('register') }}" method="POST">
@@ -30,9 +30,9 @@
                     <label class="input input-bordered flex items-center gap-3 w-full rounded-[10px] border-slate-200 bg-slate-50">
                         <i class="fas fa-user text-slate-400 text-[0.82rem]"></i>
                         <input type="text" name="nama" value="{{ old('nama') }}"
-                               placeholder="Masukkan nama lengkap..."
-                               class="grow bg-transparent text-slate-800 text-[0.88rem]"
-                               required>
+                            placeholder="Masukkan nama lengkap..."
+                            class="grow bg-transparent text-slate-800 text-[0.88rem]"
+                            required>
                     </label>
                 </div>
 
@@ -44,9 +44,9 @@
                     <label class="input input-bordered flex items-center gap-3 w-full rounded-[10px] border-slate-200 bg-slate-50">
                         <i class="fas fa-envelope text-slate-400 text-[0.82rem]"></i>
                         <input type="email" name="email" value="{{ old('email') }}"
-                               placeholder="Masukkan email..."
-                               class="grow bg-transparent text-slate-800 text-[0.88rem]"
-                               required>
+                            placeholder="Masukkan email..."
+                            class="grow bg-transparent text-slate-800 text-[0.88rem]"
+                            required>
                     </label>
                 </div>
 
@@ -58,9 +58,9 @@
                     <label class="input input-bordered flex items-center gap-3 w-full rounded-[10px] border-slate-200 bg-slate-50">
                         <i class="fas fa-map-marker-alt text-slate-400 text-[0.82rem]"></i>
                         <input type="text" name="alamat" value="{{ old('alamat') }}"
-                               placeholder="Masukkan alamat..."
-                               class="grow bg-transparent text-slate-800 text-[0.88rem]"
-                               required>
+                            placeholder="Masukkan alamat..."
+                            class="grow bg-transparent text-slate-800 text-[0.88rem]"
+                            required>
                     </label>
                 </div>
 
@@ -73,9 +73,9 @@
                         <label class="input input-bordered flex items-center gap-2 rounded-[10px] border-slate-200 bg-slate-50">
                             <i class="fas fa-phone text-slate-400 text-[0.78rem]"></i>
                             <input type="number" name="no_hp" value="{{ old('no_hp') }}"
-                                   placeholder="No. HP..."
-                                   class="grow bg-transparent text-slate-800 text-[0.85rem]"
-                                   required>
+                                placeholder="No. HP..."
+                                class="grow bg-transparent text-slate-800 text-[0.85rem]"
+                                required>
                         </label>
                     </div>
                     <div class="form-control">
@@ -85,9 +85,9 @@
                         <label class="input input-bordered flex items-center gap-2 rounded-[10px] border-slate-200 bg-slate-50">
                             <i class="fas fa-address-card text-slate-400 text-[0.78rem]"></i>
                             <input type="number" name="no_ktp" value="{{ old('no_ktp') }}"
-                                   placeholder="No. KTP..."
-                                   class="grow bg-transparent text-slate-800 text-[0.85rem]"
-                                   required>
+                                placeholder="No. KTP..."
+                                class="grow bg-transparent text-slate-800 text-[0.85rem]"
+                                required>
                         </label>
                     </div>
                 </div>
@@ -100,11 +100,11 @@
                     <label class="input input-bordered flex items-center gap-2 w-full rounded-[10px] border-slate-200 bg-slate-50">
                         <i class="fas fa-lock text-slate-400 text-[0.78rem]"></i>
                         <input type="password" name="password" id="password_reg"
-                               placeholder="Password..."
-                               class="grow bg-transparent text-slate-800 text-[0.85rem]"
-                               required>
+                            placeholder="Password..."
+                            class="grow bg-transparent text-slate-800 text-[0.85rem]"
+                            required>
                         <i class="fas fa-eye text-slate-400 text-[0.78rem] cursor-pointer" id="toggle_reg"
-                           onclick="togglePassword('password_reg', 'toggle_reg')"></i>
+                            onclick="togglePassword('password_reg', 'toggle_reg')"></i>
                     </label>
                 </div>
 
@@ -116,11 +116,11 @@
                     <label class="input input-bordered flex items-center gap-2 w-full rounded-[10px] border-slate-200 bg-slate-50">
                         <i class="fas fa-lock text-slate-400 text-[0.78rem]"></i>
                         <input type="password" name="password_confirmation" id="password_confirm"
-                               placeholder="Ulangi password..."
-                               class="grow bg-transparent text-slate-800 text-[0.85rem]"
-                               required>
+                            placeholder="Ulangi password..."
+                            class="grow bg-transparent text-slate-800 text-[0.85rem]"
+                            required>
                         <i class="fas fa-eye text-slate-400 text-[0.78rem] cursor-pointer" id="toggle_confirm"
-                           onclick="togglePassword('password_confirm', 'toggle_confirm')"></i>
+                            onclick="togglePassword('password_confirm', 'toggle_confirm')"></i>
                     </label>
                 </div>
 

@@ -57,28 +57,27 @@
     </div>
 
     <script>
-        function toggleSidebar(){
-            const sidebar=document.getElementById('appSidebar')
-            const overlay=document.getElementById('sidebarOverlay')
+        function toggleSidebar() {
+            const sidebar = document.getElementById('appSidebar')
+            const overlay = document.getElementById('sidebarOverlay')
 
             sidebar.classList.toggle('open')
 
-            overlay.style.display=
-            sidebar.classList.contains('open')
-            ? 'block'
-            : 'none'
+            overlay.style.display =
+                sidebar.classList.contains('open') ?
+                'block' :
+                'none'
         }
 
-        function toggleFullscreen(){
-            const icon=document.getElementById('fsIcon')
+        function toggleFullscreen() {
+            const icon = document.getElementById('fsIcon')
 
-            if(!document.fullscreenElement){
+            if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen()
-                icon.className='fas fa-compress'
-            }
-            else{
+                icon.className = 'fas fa-compress'
+            } else {
                 document.exitFullscreen()
-                icon.className='fas fa-expand'
+                icon.className = 'fas fa-expand'
             }
         }
     </script>

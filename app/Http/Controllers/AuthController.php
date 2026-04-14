@@ -24,12 +24,11 @@ class AuthController extends Controller
                 return redirect()->route('admin.dashboard');
             } elseif ($user->role == 'dokter') {
                 return redirect()->route('dokter.dashboard');
-            } else {
-                return redirect()->route('pasien.dashboard');
             }
+            return redirect()->route('pasien.dashboard');
         }
 
-        return back()->withErrors(['email' => 'Email atau Password Salah !']);
+        return back()->withErrors(['email' => 'Email atau Password Salah !!']);
     }
 
     public function showRegister()
@@ -48,8 +47,8 @@ class AuthController extends Controller
             'password' => ['required', 'confirmed'],
         ]);
 
-        if(User::where('no_ktp', $request->no_ktp)->exists()) {
-            return back()->withErrors(['no_ktp' => 'Nomor Ktp Sudah terdaftar']);
+        if (User::where('no_ktp', $request->no_ktp)->exists()) {
+            return back()->withErrors(['no_ktp' => 'Nomor KTP Sudah terdaftar!']);
         }
 
         User::create([

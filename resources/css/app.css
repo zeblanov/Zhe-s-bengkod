@@ -8,7 +8,7 @@
     }
 
     * {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: "Plus Jakarta Sans", sans-serif;
     }
 
     body {
@@ -18,7 +18,7 @@
 
 @layer components {
     .brand-serif {
-        font-family: 'Instrument Serif', serif;
+        font-family: "Instrument Serif", serif;
     }
 
     /* LAYOUT */
@@ -30,9 +30,14 @@
     .sidebar-fixed {
         width: var(--sidebar-w);
         @apply h-screen sticky top-0 shrink-0 z-40 overflow-hidden;
-        background: linear-gradient(160deg, #1e2d6b 0%, #2d4499 60%, #1a2d7a 100%);
+        background: linear-gradient(
+            160deg,
+            #12d6b6 0%,
+            #2d4499 60%,
+            #1a2d7a 100%
+        );
         box-shadow: 4px 0 24px rgba(30, 45, 107, 0.35);
-        transition: all .3s cubic-bezier(.4, 0, .2, 1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* MAIN */
@@ -46,7 +51,7 @@
     }
 
     /* MOBILE */
-    @media(max-width:1024px) {
+    @media (max-width: 1024px) {
         .sidebar-fixed {
             @apply fixed left-0 -translate-x-full;
         }
@@ -64,10 +69,10 @@
     /* BUTTONS */
     .btn-primary-gradient {
         @apply flex items-center justify-center gap-2 w-full p-[13px] text-white rounded-[10px] text-[0.9rem] font-bold transition-all duration-150 border-none cursor-pointer;
-        background: linear-gradient(135deg, #1e2d6b, #2d4499);
+        background: linear-gradient(135deg, #12d6b6, #2d4499);
     }
 
     .btn-primary-gradient:hover {
-        background: linear-gradient(135deg, #162156, #1e2d6b);
+        background: linear-gradient(135deg, #162156, #12d6b6);
     }
 }
